@@ -1,4 +1,4 @@
-QT       += core gui sql
+QT       += core gui sql charts
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -21,6 +21,7 @@ SOURCES += \
     gestion_hbib.cpp \
     main.cpp \
     mainwindow.cpp \
+    stat_combo.cpp \
     ticket.cpp
 
 HEADERS += \
@@ -28,12 +29,14 @@ HEADERS += \
     dialog_ticket.h \
     gestion_hbib.h \
     mainwindow.h \
+    stat_combo.h \
     ticket.h
 
 FORMS += \
     dialog_ticket.ui \
     gestion_hbib.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    stat_combo.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

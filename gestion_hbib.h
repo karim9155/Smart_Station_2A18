@@ -9,6 +9,7 @@
 
 #include "ticket.h"
 #include "dialog_ticket.h"
+#include "stat_combo.h"
 
 
 namespace Ui {
@@ -25,6 +26,16 @@ public:
 
     ticket tmp;
     QSortFilterProxyModel *proxy;
+
+    QString get_code () const ;
+    QString get_depart () const ;
+    QString get_arrive() const;
+    QString get_type() const ;
+    QString get_date() const ;
+    double get_prix() const;
+
+    void fill_form(QString);
+
 
     void show_tables();
 
@@ -43,10 +54,22 @@ private slots:
 
     void on_rech_textChanged(const QString &arg1);
 
+    void on_actionedit_ticket_triggered();
+
+    void on_actionstats_triggered();
+
+    void on_btnAdd_clicked();
+
+    void on_btnEdit_clicked();
+
+    void on_btnDelete_clicked();
+
 private:
     Ui::gestion_hbib *ui;
     QString selected="";
     int sel_col=-1;
+    stat_combo *s;
+
 };
 
 #endif // GESTION_HBIB_H
