@@ -19,12 +19,12 @@
      <rect>
       <x>70</x>
       <y>40</y>
-      <width>581</width>
-      <height>441</height>
+      <width>701</width>
+      <height>511</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -35,16 +35,6 @@
        <rect>
         <x>150</x>
         <y>50</y>
-        <width>113</width>
-        <height>22</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="etat">
-      <property name="geometry">
-       <rect>
-        <x>150</x>
-        <y>100</y>
         <width>113</width>
         <height>22</height>
        </rect>
@@ -148,46 +138,25 @@
        <string>Modifier</string>
       </property>
      </widget>
-    </widget>
-    <widget class="QWidget" name="tab_2">
-     <attribute name="title">
-      <string>Supprimer</string>
-     </attribute>
-     <widget class="QLineEdit" name="refSupp">
+     <widget class="QComboBox" name="comboBoxEtat">
       <property name="geometry">
        <rect>
         <x>150</x>
-        <y>80</y>
-        <width>113</width>
+        <y>100</y>
+        <width>111</width>
         <height>22</height>
        </rect>
       </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_3">
-      <property name="geometry">
-       <rect>
-        <x>170</x>
-        <y>130</y>
-        <width>93</width>
-        <height>28</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>supprimer</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_5">
-      <property name="geometry">
-       <rect>
-        <x>70</x>
-        <y>80</y>
-        <width>56</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>ref</string>
-      </property>
+      <item>
+       <property name="text">
+        <string>En marche</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>En panne</string>
+       </property>
+      </item>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_3">
@@ -198,11 +167,134 @@
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>40</y>
+        <y>100</y>
         <width>421</width>
         <height>301</height>
        </rect>
       </property>
+     </widget>
+     <widget class="QLineEdit" name="Rech">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>50</y>
+        <width>113</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBoxRech">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>20</y>
+        <width>111</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>ref</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>prix</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>50</y>
+        <width>93</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Rechercher</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBoxTri">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>30</y>
+        <width>101</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>etat</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>prix</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>date_rep</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="pushButton_5">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>60</y>
+        <width>71</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Trier</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_6">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>410</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Imprimer</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_7">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>100</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Supprimer</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_4">
+     <attribute name="title">
+      <string>Statistiques</string>
+     </attribute>
+     <widget class="QFrame" name="horizontalFrame">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>30</y>
+        <width>631</width>
+        <height>411</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout"/>
      </widget>
     </widget>
    </widget>

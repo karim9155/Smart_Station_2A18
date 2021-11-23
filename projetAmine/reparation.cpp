@@ -23,12 +23,24 @@ bool reparation::ajouter()
     return q.exec();
 
 }
+bool reparation::rechercher(int ref)
+{
+    QString refer=QString::number(ref);
+    QSqlQuery q("select * from reparation where ref="+refer);
+    while(q.next()){
+        return true;
+    }
+    return false;
+
+}
 bool reparation::supprimer(int ref)
 {
+    bool test=rechercher(ref);
     QSqlQuery q;
     q.prepare("delete from reparation where ref=:ref");
     q.bindValue(":ref",ref);
-    return q.exec();
+    q.exec();
+    return test;
 }
 bool reparation::modifier(int ref)
 {
@@ -39,7 +51,8 @@ bool reparation::modifier(int ref)
     q.bindValue(":etat",etat);
     q.bindValue(":prix",p);
     q.bindValue(":date_rep",date_rep);
-    return q.exec();
+    q.exec();
+    return rechercher(ref);
 }
 QSqlQueryModel* reparation::afficher()
 {
@@ -47,7 +60,27 @@ QSqlQueryModel* reparation::afficher()
     model->setQuery("select * from reparation");
     return model;
 }
+QSqlQueryModel* reparation::afficherRech(QString critere,QString rech)
+{
+    QSqlQueryModel* model=new QSqlQueryModel();
+    model->setQuery("select * from reparation where "+critere+" like '"+rech+"%'");
+    return model;
+}
+QSqlQueryModel* reparation::afficherTri(QString critere)
+{
+    QSqlQueryModel* model=new QSqlQueryModel();
+    model->setQuery("select * from reparation order by "+critere);
+    return model;
+}
+void reparation::stat(QPieSeries *series)
+{
+    series->clear();
+     QSqlQuery q("select etat,count(*) from reparation group by etat");
 
+     while(q.next())
+     {series->append(q.value(0).toString()+": "+q.value(1).toString(),q.value(1).toInt());}
+
+}
 
 
 
