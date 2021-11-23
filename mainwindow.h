@@ -1,29 +1,33 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <QDate>
 #include <QMainWindow>
-#include "gestion_hbib.h"
-#include "connexion.h"
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
+class QTextBrowser;
 QT_END_NAMESPACE
 
+//! [0]
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+    MainWindow();
 
-
-private slots:
-    void on_pushButton_clicked();
-
+public slots:
+    void setFontSize(int size);
+    void setMonth(int month);
+    void setYear(QDate date);
 
 private:
-    Ui::MainWindow *ui;
-    Connexion c;
+    void insertCalendar();
+
+    int fontSize;
+    QDate selectedDate;
+    QTextBrowser *editor;
 };
+//! [0]
+
 #endif // MAINWINDOW_H

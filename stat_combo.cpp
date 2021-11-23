@@ -18,21 +18,21 @@ stat_combo::~stat_combo()
 void stat_combo::choix_bar()
 {
 QSqlQuery q1,q2,q3,q4, q5;
-qreal tot=0,c1=0,c2=0,c3=0, c4=0;
+qreal tot=0,c1=1,c2=0,c3=0, c4=0;
 
-q1.prepare("SELECT * FROM tickets");
+q1.prepare("SELECT * FROM ticket");
 q1.exec();
 
-q2.prepare("SELECT * FROM tickets WHERE type='type 1'");
+q2.prepare("SELECT * FROM ticket WHERE type='Individuel'");
 q2.exec();
 
-q3.prepare("SELECT * FROM tickets WHERE type='type 2'");
+q3.prepare("SELECT * FROM ticket WHERE type='Famille'");
 q3.exec();
 
-q4.prepare("SELECT * FROM tickets WHERE type='type 3' ");
+q4.prepare("SELECT * FROM ticket WHERE type='Couple' ");
 q4.exec();
 
-q5.prepare("SELECT * FROM tickets WHERE type='type 4' ");
+q5.prepare("SELECT * FROM ticket WHERE type='Autre' ");
 q5.exec();
 
 
@@ -49,10 +49,10 @@ c4=c4/tot;
 
 
 // Assign names to the set of bars used
-        QBarSet *set0 = new QBarSet("type 1");
-        QBarSet *set1 = new QBarSet("type 2");
-        QBarSet *set2 = new QBarSet("type 3");
-        QBarSet *set3 = new QBarSet("type 4");
+        QBarSet *set0 = new QBarSet("Individuel");
+        QBarSet *set1 = new QBarSet("Famille");
+        QBarSet *set2 = new QBarSet("Couple");
+        QBarSet *set3 = new QBarSet("Autre");
 
         // Assign values for each bar
         *set0 << c1;
