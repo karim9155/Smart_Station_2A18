@@ -415,7 +415,7 @@
      <widget class="QLineEdit" name="lineEdit">
       <property name="geometry">
        <rect>
-        <x>700</x>
+        <x>790</x>
         <y>30</y>
         <width>113</width>
         <height>22</height>
@@ -436,6 +436,22 @@
       </property>
       <property name="text">
        <string>PDF</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="triid">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>30</y>
+        <width>97</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">*{color: rgb(255, 255, 255);}</string>
+      </property>
+      <property name="text">
+       <string>tri id</string>
       </property>
      </widget>
     </widget>

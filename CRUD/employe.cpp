@@ -310,7 +310,7 @@ void employe::stat(QCustomPlot *customPlot)
         deux=query.value(0).toInt();
     }
 
-    query.prepare("SELECT COUNT(DISTINCT id) FROM EMPLOYE where capacite between 46 and 60");
+    query.prepare("SELECT COUNT(DISTINCT id) FROM EMPLOYE where age between 46 and 60");
     query.exec();
     int trois;
     while(query.next())
@@ -355,7 +355,7 @@ void employe::stat(QCustomPlot *customPlot)
     QVector<double> fossilData, nuclearData, regenData;
     fossilData  << un << deux << trois;
    // nuclearData << 0.08*10.5 << 0.12*5.5 << 0.12*5.5 << 0.40*5.8 << 0.09*5.2 << 0.00*4.2 << 0.07*11.2;
-    regenData   << 0.06*10.5 << 0.05*5.5 << 0.04*5.5 << 0.06*5.8 << 0.02*5.2 << 0.07*4.2 << 0.25*11.2;
+    regenData   << 0.06*10.5 << 0.05*5.5 << 0.04*5.5 << 0.06*5.8 << 0.02*5.2 << 0.07*4.2<< 0.25*11.2;
     fossil->setData(ticks, fossilData);
   //  nuclear->setData(ticks, nuclearData);
  //   regen->setData(ticks, regenData);
@@ -370,4 +370,15 @@ void employe::stat(QCustomPlot *customPlot)
     customPlot->legend->setFont(legendFont);
     customPlot->setInteractions(QCP::iRangeDrag | QCP::iRangeZoom);
 
+}
+QSqlQueryModel * employe::triid()
+{
+    QSqlQueryModel * model=new QSqlQueryModel();
+    model->setQuery("SELECT * FROM EMPLOYE ORDER BY ID");
+    model->setHeaderData(0, Qt::Horizontal,QObject :: tr("IDENTIFIANT"));
+    model->setHeaderData(1, Qt::Horizontal, QObject :: tr("NOM"));
+    model->setHeaderData(3, Qt::Horizontal, QObject :: tr("TEL"));
+     model->setHeaderData(2, Qt::Horizontal, QObject :: tr("AGE"));
+    model->setHeaderData(4, Qt::Horizontal, QObject :: tr("EMAIL"));
+    return model;
 }

@@ -5,6 +5,7 @@
 #include <QIntValidator>
 #include <QFileDialog>
 #include <QTableView>
+#include <QSqlQuery>
 #include <QPrinter>
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -256,4 +257,30 @@ void MainWindow::on_stat_clicked()
 
 
     E.stat(ui->widget);
+}
+
+void MainWindow::on_comboBox_2_currentIndexChanged(const QString &arg1)
+{
+    QString id =ui->comboBox_2->currentText();
+
+
+
+              QSqlQuery e;
+              e.prepare("select * from EMPLOYE where id ='"+id+"'");
+             if(e.exec())
+             {
+                 while (e.next()) {
+                      ui->lineEdit_Nom_md->setText(e.value(1).toString());
+                      ui->lineEdit_Email_md->setText(e.value(0).toString());
+
+                      ui->lineEdit_Tel_md->setText(e.value(3).toString());
+                      ui->lineEdit_age_md->setText(e.value(2).toString());
+
+                 }
+             }
+}
+
+void MainWindow::on_triid_clicked()
+{
+      ui->Tab_employe->setModel(C.triid());
 }

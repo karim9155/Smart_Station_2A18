@@ -42,6 +42,10 @@ private slots:
 
     void on_stat_clicked();
 
+    void on_comboBox_2_currentIndexChanged(const QString &arg1);
+
+    void on_triid_clicked();
+
 private:
     Ui::MainWindow *ui;
  employe C ;

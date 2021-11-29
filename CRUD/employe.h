@@ -37,6 +37,7 @@ QSqlQueryModel * trierage();
 void recherche(QTableView * tabl, QString,int,int);
 void pdf(QString filename);
 void stat(QCustomPlot *customPlot);
+QSqlQueryModel * triid();
 };
 
 #endif //  employe_H
