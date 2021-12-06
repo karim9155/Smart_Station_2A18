@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialogticket</class>
+ <widget class="QDialog" name="Dialogticket">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>893</width>
+    <height>432</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QTableView" name="tabTicket">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>100</y>
+     <width>531</width>
+     <height>231</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>563</x>
+     <y>101</y>
+     <width>295</width>
+     <height>265</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QLabel" name="formlabel">
+      <property name="font">
+       <font>
+        <family>Impact</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Ajout Ticket</string>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="comboType">
+      <item>
+       <property name="text">
+        <string>Type</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Individuel</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Couple</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Famille</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="t_depart">
+      <item>
+       <property name="text">
+        <string>Depart</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Tunis</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Bizerte</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Sfax</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SidiBouzid</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Beja</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Jendouba</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Kef</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Nabeul</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Sousse</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Monastir</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Mahdia</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Gabes</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Gbelly</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Tozeur</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Tataouin</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Karouen</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Kasserine</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Gafsa</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Mednine</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ariana</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ben Arous</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Siliena</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Zaghouan</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="t_arrive">
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>Arrive</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="t_prix">
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>Prix</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QDateEdit" name="t_date">
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnAjouter">
+      <property name="text">
+       <string>Ajouter</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="modifierTbtn">
+        <property name="text">
+         <string>Modifier</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="supprimerTbtn">
+        <property name="text">
+         <string>Supprimer</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="imageBtn">
+        <property name="text">
+         <string>Image</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>337</x>
+     <y>70</y>
+     <width>211</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="placeholderText">
+    <string>Recherche</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>79</x>
+     <y>70</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>CODE</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>TYPE</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Derpart</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Arrive</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Prix</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>75</y>
+     <width>47</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Tri Par :</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="triDesc">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>70</y>
+     <width>82</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Desc</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnCalendrier">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>370</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Calendrier</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>370</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Voir stat</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_depart">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>10</y>
+     <width>301</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
